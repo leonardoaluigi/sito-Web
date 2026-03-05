@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CineRate</title>
+        <link rel="stylesheet" href="style/main.css">
+        <script src="script/catalogo.js"></script>
+        <script src="script/gestione_ancora_profilo.js"></script>
+        <script src="script/gestisci_ancora_film.js"></script>
+    </head>
+    <body>
+        <div class="main-menu">
+            <img src="images/logo_edited.jpg" alt="logo">
+            <input type="checkbox" id="check">
+            <label for="check" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a  id="menu-profilo" href="">Profilo</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="catalogo_box">
+            <h1>Catalogo</h1>
+            <div id="filtro_box">
+                <label for="genere">Genere:</label>
+                <select id="genere">
+                    <option value="">Tutti</option>
+                    <option value="Animazione">Animazione</option>
+                    <option value="Avventura">Avventura</option>
+                    <option value="Azione">Azione</option>
+                    <option value="Biografico">Biografico</option>
+                    <option value="Commedia">Commedia</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Documentario">Documentario</option>
+                    <option value="Drammatico">Drammatico</option>
+                    <option value="Famiglia">Famiglia</option>
+                    <option value="Fantascienza">Fantascienza</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Guerra">Guerra</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Mafia">Mafia</option>
+                    <option value="Mistero">Mistero</option>
+                    <option value="Musical">Musical</option>
+                    <option value="Poliziesco">Poliziesco</option>
+                    <option value="Romantico">Romantico</option>
+                    <option value="Sportivo">Sportivo</option>
+                    <option value="Storico">Storico</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Western">Western</option>
+                </select>
+                
+                <label for="anno">Anno:</label>
+                <input type="number" id="anno" min="1900" max="2025">
+
+                <label for="durata_min">Durata minima (min):</label>
+                <input type="number" id="durata_min" name="durata_min" min="0" max="206">
+
+
+                <button id="filtro_btn">Filtra</button>
+            </div>
+            <div id="catalogo_film">
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025-CineRate | <a href="contatti.html">CONTATTI</a></p>
+        </footer>
+        
+    </body>
+</html>

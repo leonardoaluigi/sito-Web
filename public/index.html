@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CineRate</title>
+        <link rel="stylesheet" href="style/main.css">
+        <script src="script/index.js"></script>
+        <script src="script/gestione_ancora_profilo.js"></script>
+        <script src="script/gestisci_ancora_film.js"></script>
+    </head>
+    <body>
+        <div class="main-menu">
+            <img src="images/logo_edited.jpg" alt="logo">
+            <input type="checkbox" id="check">
+            <label for="check" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a  id="menu-profilo" href="">Profilo</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="pres">
+            <h1>Benvenuto su CineRate!</h1>
+            <p>Scopri e recensisci i tuoi film preferiti!!!</p>
+            <p>Vai al <a href="catalogo.html">CATALOGO</a></p>
+        </div>
+        <div class="film">
+            <h1>Film in evidenza</h1>
+            <div id="slides">
+                <button id="prec">&#x276E;</button>
+                <div id="film_evidenza">
+                </div>
+                <button id="succ">&#x276F;</button>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2025-CineRate | <a href="contatti.html">CONTATTI</a></p>
+        </footer>
+        
+    </body>
+</html>

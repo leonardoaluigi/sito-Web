@@ -1,0 +1,1211 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar+One&display=swap');
+
+:root{
+    --background: #0b0c10;
+    --font: #c5c6c7;
+    --button: #66fcf1;
+    --menuFootC: #1f2833;
+}
+
+body{
+    margin: 0 0;
+}
+
+.main-menu{
+    background-color: var(--menuFootC);
+    height: 4em;
+    width:100%;
+    position: fixed;/*fissa la posizione del menù*/
+    display: flex;/*dispone su riga orizzontale gli elementi del container*/
+    z-index: 1000;/*imposta la profondità del menù*/
+}
+
+.main-menu nav{
+    width:100%;
+    padding-right: 3em;/*stacca il menù dal suo margine destro di 3em*/
+}
+
+.main-menu nav ul{
+    list-style: none;/*eliminiamo l'elenco puntato che è di default sulle liste (unordered)*/
+    display: flex;
+    justify-content: right;/*allinea a destra (orizzontalmente) gli elementi dell'ul*/
+    align-items: center;/*allinea verticalmente*/
+    font-family: Oswald, sans-serif;
+    gap: 3em;/*imposta la distanza tra gli elementi dell'ul*/
+    color: var(--font);
+}
+
+.main-menu li {
+    color: var(--font);
+    font-size: 1em;
+    
+}
+
+.main-menu li a{
+    color: var(--font);
+    text-decoration: none;
+    transition: 0.5s ease-out;/*in 0.5s l'animazione inizia velocemente e rallenta verso la fine*/
+}
+
+.main-menu li a:hover{
+    color:var(--button);
+}
+
+.main-menu img{
+    height:100%;
+}
+
+.pres{
+    padding: 1em 0;
+    font-family: Roboto, sans-serif;
+    background-color: var(--background);
+    color: #c5c6c7;
+    display:flex;
+    flex-direction: column;/*imposta la direzione del flex verticalmente (di default orizzontale)*/
+    align-items: center; 
+    font-size: 1.5em;
+}
+
+.pres h1{
+    margin-top: 2em;
+    font-family: Oswald,sans-serif;
+    text-align:center
+}
+
+.pres p{
+    text-align:center;
+}
+
+.pres p a {
+  color: var(--button);
+  font-family: Oswald, sans-serif;
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  transition: 0.4s ease; 
+}
+
+
+.film{
+    background-color: var(--background);
+    padding: 2em 0;
+}
+
+.film h1{
+    display: flex;
+    justify-content: center;
+    color: var(--font);
+    font-family: Oswald, sans-serif;
+    margin:0;
+}
+
+#slides{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#film_evidenza{
+    height: 25em;
+    display: flex;
+    padding: 0 8em;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+#film_evidenza a{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 50%
+}
+
+#film_evidenza a:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#film_evidenza a img{
+    width:100%;
+    height: 100%;
+}
+
+#slides button{
+    height: 2em;
+    width: 2em;
+    background-color: var(--button);
+    border: none;
+    border-radius: 50%;
+    cursor:pointer;
+}
+
+#catalogo_box{
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#catalogo_box h1{
+    margin: 0;
+    padding: 4em 0 2em 0;
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    color: var(--font);
+}
+
+#filtro_box {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background-color: #4b4b4b;
+  padding: 2em 2em;
+  border-radius: 1em;
+  color: var(--font);
+  font-size: 1em;
+  font-family: Roboto,sans-serif;
+  width: 90%;
+}
+
+#filtro_box select,
+#filtro_box input {
+  padding: 0.6em 1em;
+  border-radius: 0.6em;
+  border: none;
+  font-size: 1em;
+  width: 10em;
+  background-color: #fff;
+  font-family: Roboto, sans-serif;
+  color: #000;
+}
+
+#filtro_box input[type="number"] {
+  width: 6em;
+}
+
+#filtro_box button {
+  background-color: var(--button);
+  color: var(--background);
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 0.6em;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+
+#catalogo_film{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/*crea 3 colonne da 1frazione dello spazio disponibile quindi uguali(è uguale a 1fr 1fr 1fr)*/
+    gap:3em;/*gap tra le colonne*/
+    padding: 3em 2em;
+    justify-items: center;
+}
+
+#catalogo_film a{
+    width: 90%;
+    display: block;
+}
+
+#catalogo_film a img{
+    width: 100%;
+    height: 100%;
+}
+
+#catalogo_film a:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#catalogo_film p:first-of-type{
+    color: var(--font);
+    text-align:center;
+    font-size:7em;
+    font-family: Roboto,sans-serif;
+}
+
+#catalogo_film p:last-of-type{
+    color: var(--font);
+    text-align:center;
+    font-size:4em;
+    font-family: Roboto,sans-serif;
+}
+
+#descrizione_film, #descrizione_film_adm{
+    background-color:var(--background);
+}
+
+#descrizione_film img, #descrizione_film_adm img{/*allineamento orizzontale display:block margin:auto*/
+    width: 80%;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+#descrizione_film h1,#descrizione_film_adm h1{
+    color:var(--font);
+    font-family: Oswald, sans-serif;
+    text-align: center;
+    margin-top: 0;
+    padding-top:4em;
+}
+
+#descrizione_film p, #descrizione_film_adm p{
+    color:var(--font);
+    font-family: Roboto, sans-serif;
+    font-size: 1.2em;
+    padding:0 1em;
+    text-align: center;
+}
+
+
+#descrizione_film .divider, #descrizione_film_adm .divider{
+    display: block;
+    padding: 0;
+    width: 60%;
+    margin: auto ;
+    height: 0.15em;
+    background-color: var(--font);
+}
+
+#descrizione_film .divider:last-child, #descrizione_film_adm .divider:last-child{/*ci riferiamo agli ultimi elementi della classe divider*/
+    display: block;
+    padding: 0;
+    width: 80%;
+    margin: auto ;
+    height: 0.15em;
+    background-color: var(--font);
+}
+
+
+
+#spazio_recensioni, #spazio_recensioni_adm{/*comprensivo di titolo form e recensioni fatte*/
+    background-color: var(--background);
+    margin: 0;
+}
+
+#spazio_recensioni h2, #spazio_recensioni_adm h2{
+    font-family: Oswald, sans-serif;
+    color: var(--font);
+    text-align: center;
+    margin:0;
+    font-size: 2em;
+    padding:0.8em 0;
+}
+
+#form_recensioni{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+#form_recensioni textarea{
+    width: 80%;
+    height: 5em;
+    margin: 0 0 1em 0;
+    font-family: Roboto,sans-serif;
+    border: 0.2em solid;
+    border-radius: 1em;
+}
+
+#form_recensioni button{
+    height: 2.5em;
+    width: 10%;
+    border: 0.2em solid;
+    border-radius:1em;
+    cursor:pointer;
+    background-color: #66fcf1;
+    font-family: Oswald, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color:#0b0c10;
+}
+
+#modifica_dettagli_admin{
+    padding-top: 2em;
+    background-color: var(--background);
+    color: var(--font);
+    display: flex;
+    flex-direction: column;
+    gap:2em;
+}
+
+#modifica_dettagli_admin p {
+    margin: 0;
+    padding:0;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    font-size: 1.2em;
+}
+
+#modifica_dettagli_admin button{
+    margin-left: 2em;
+    border: 0.2em solid;
+    border-radius:0.5em; 
+    background-color: var(--button);
+    color: var(--background);
+    font-size: 0.8em;
+    font-family: Oswald,sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#modifica_dettagli_admin .divider{
+    display: block;
+    padding: 0;
+    width:80%;
+    margin: auto ;
+    height: 0.15em;
+    background-color: var(--font);
+}
+
+#recensioni_box, #recensioni_box_adm{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
+
+.empty_recens_box{/* caso in cui non abbiamo recensioni da mostrare su un film*/
+    margin:0;
+    text-align: center;
+    padding-bottom: 1.7em;
+    color: var(--font);
+    font-family: Roboto, sans-serif;
+    font-size: 1.3em;
+}
+
+.no_empty_recens_box_utente{/*paragrafo che mostra l'utente e il suo nome*/
+    margin:0 0 0 2em;
+    color: var(--font);
+    font-family: Roboto, sans-serif;
+}
+
+.no_empty_recens_box_testo{/*paragrafo che mostra il testo della recensione*/
+    margin:0 2em;
+    color: var(--font);
+    font-family: Roboto, sans-serif;
+    padding: 0 2em 1.5em 2em;/*creo spazio intorno al paragrafo per poi colorarlo con background col*/
+    border: 0.1em solid;
+    border-radius: 1em;
+    background-color: var(--font);
+    color: var(--background);
+}
+
+#recensioni_box_adm button{
+    width:10%;
+    display: block;
+    margin: auto;
+    border: 0.2em solid;
+    border-radius: 0.5em;
+    background-color: var(--button);
+    font-family: Oswald,sans-serif;
+    color: var(--background);
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#recensioni_box_adm button:last-of-type{
+    margin-bottom: 1em;
+}
+
+
+
+#recensioni_box .divider{
+    display: block;
+    padding: 0;
+    margin: auto ;
+    height: 0.15em;
+    width:80%;
+    background-color: var(--font);
+}
+
+
+#recensioni_box .divider:last-child{
+    background-color: var(--background);
+}
+
+
+
+#contatti_box{
+    background-color: var(--background);
+}
+
+#contatti_box h1{
+    margin: 0;
+    padding: 2.5em 0 0 0;
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    color: var(--font);
+}
+
+#contatti_box p{
+    font-family: Roboto, sans-serif;
+    color: var(--font);
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 0em;
+}
+
+#contatti_box p:first-of-type{
+    margin: 2em 0;
+}
+
+#contatti_box p:last-of-type{
+    margin-bottom: 0;
+    padding-bottom: 2em;
+    margin-top: 0;
+}
+
+#contatti_box h2{
+    padding-top:0;
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    color: var(--font);
+    margin-top:0;
+}
+
+#contatti_form{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contatti_form label{
+    margin-bottom: 1em;
+    font-family: Roboto, sans-serif;
+    color: var(--font);
+    font-size: 1.2em;
+
+}
+
+#contatti_form input{
+    height:3em;
+    width:30%;
+    margin-bottom: 3em;
+    font-family: Roboto, sans-serif;
+    border: 0.2em solid;
+    border-radius: 1em;
+}
+
+#contatti_form textarea{
+    height:8em;
+    width: 30%;
+    margin-bottom: 3em;
+    font-family: Roboto, sans-serif;
+    border:0.2em solid;
+    border-radius: 1em;
+}
+
+#contatti_form button{
+    margin-bottom: 3em;
+    height: 2.5em;
+    width: 10%;
+    border: 0.2em solid;
+    border-radius:1em;
+    background-color: #66fcf1;
+    font-weight: bold;
+    font-family: Oswald, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    color:#0b0c10;
+}
+
+#contatti_box a{
+    text-decoration: none;
+    color: var(--button);
+}
+
+
+
+#login_box{
+    background-color: var(--background);
+}
+
+#login_box h1{
+    margin: 0;
+    padding: 2.5em 0 1.5em 0;
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    color: var(--font);
+}
+
+#login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#login_form label{
+    margin:2em 0;
+    font-size: 1.2em;
+    color: var(--font);
+    font-family: Roboto, sans-serif;
+}
+
+#login_form input{
+    width: 30%;
+    border: 0.2em solid;
+    border-radius: 1em;
+    height: 2em;
+    font-size: 1em;
+    font-family: Roboto, sans-serif;
+}
+
+#login_form button{
+    width:max-content;
+    height: max-content;
+    margin: 2em 0;
+    font-family: Oswald, sans-serif;
+    font-size: 1.2em;
+    border: 0.2em solid;
+    border-radius: 0.5em;;
+    background-color: var(--button);
+    font-weight: bold;
+    cursor:pointer;
+}
+
+#login_box p{
+    font-size: 1.2em;
+    color: var(--font);
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding : 1em 0;
+    text-align: center;
+}
+
+
+#login_box p:first-of-type{
+    padding-bottom:0;
+}
+
+#login_box p:last-of-type{
+    padding-top: 0;
+}
+
+#login_box p:last-of-type a{
+    text-decoration: none;
+    color: var(--button);
+}
+
+#registr_box{
+    background-color: var(--background);
+}
+
+#registr_box h1{
+    margin: 0;
+    padding: 2.5em 0 1.3em 0;
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    color: var(--font);
+}
+
+#registr_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#registr_form label{
+    margin:0.8em 0;
+    font-size: 1em;
+    color: var(--font);
+    font-family: Roboto, sans-serif;
+}
+
+#registr_form input{
+    width: 30%;
+    border: 0.2em solid;
+    border-radius: 1em;
+    height: 1.8em;
+    font-size: 1em;
+    font-family: Roboto, sans-serif;
+}
+
+#registr_form button{
+    width:max-content;
+    height: max-content;
+    margin: 2em 0;
+    font-family: Oswald, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 0.2em solid;
+    border-radius: 0.5em;;
+    background-color: var(--button);
+    cursor: pointer;
+}
+
+#message{
+    background-color: var(--background);
+    color: red;
+    text-align:center;
+    margin: 0;
+    padding: 1em 0;
+    font-family: Roboto, sans-serif;
+}
+
+.profilo{
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.5em;
+}
+
+.profilo h1{
+    margin: 0;
+    padding-top: 2em;
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    color: var(--font);
+    font-size: 3em;
+}
+
+
+.profilo h2{
+    color: var(--font);
+    text-align: center;
+    font-family: Oswald,sans-serif;
+    margin:0;
+    font-size: 1.9em;
+}
+
+.info_profilo{
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    font-size: 1.2em;
+    border: 0.2em solid;
+    border-radius: 0.5em;
+    background-color: var(--font);
+    color: var(--background);
+    width: 25%;
+}
+
+#logout_button_bas, #logout_button_adm{
+    width:10%;
+    height: 2.5em;
+    border: 0.2em solid;
+    border-radius: 1em;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    background-color: var(--button);
+    cursor: pointer;
+}
+
+
+.divider{
+    display: block;
+    margin: 0;
+    width:80%;
+    height: 0.15em;                               
+    background-color: var(--font);
+    border-radius: 1em;         
+}
+
+#recensioni_mie{
+    width:100%;
+}
+
+#no_recens_proprie{
+    text-align:center;
+    color: var(--font);
+    font-size: 1.5em;
+    font-family: Roboto,sans-serif;
+}
+
+#no_recens_proprie a{
+    text-decoration: none;
+    color: var(--button);
+}
+
+.recens_proprie{/*paragrafi recensioni proprie*/
+    margin:0 0 0 2em;
+    color: var(--font);
+    font-family: Roboto,sans-serif;
+    font-size:1em;
+    display: flex;
+    align-items: center;
+    gap:2em;
+    height: 3em;
+    width: 70%;
+}
+
+.elimina_recensione button{/*span con dentro bottone*/
+    border: 0.2em solid;
+    border-radius: 0.5em;
+    background-color: var(--button);
+    font-family: Oswald,sans-serif;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.recens_proprie_text{
+    margin: 0 2em 1.3em 2em;
+    color:var(--background);
+    font-family:Roboto,sans-serif;
+    font-size: 1em;
+    height: 3em;
+    border: 0.2em solid;
+    border-radius: 0.5em;
+    background-color: var(--font);
+}
+
+
+#form_admin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+#form_admin h3{
+    font-family: Oswald, sans-serif;
+    font-size: 2em;
+    color: var(--font);
+    margin-top:0;
+}
+
+#form_admin input{
+    width:30%; 
+    height: 3em;
+    font-family: Roboto,sans-serif;
+    border:0.2em solid;
+    border-radius: 0.5em;
+}
+
+#form_admin select{
+    width:30.60%;
+    height:3em;
+    color:grey;
+    border:0.2em solid;
+    border-radius: 0.5em;
+}
+
+#form_admin textarea{
+    background-color: white; 
+    width:30%;
+    height:3em;
+    font-family: Roboto,sans-serif;
+    border:0.2em solid;
+    border-radius: 0.5em;
+}
+
+#form_admin button{
+    border: 0.2em solid;
+    border-radius: 0.5em;
+    background-color: var(--button);
+    font-family: Oswald,sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+#box_404, #box_403{
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    gap:3em;
+    flex-direction: column;
+}
+
+#box_404 img, #box_403 img{
+    margin-top:0;
+    padding-top:9em;
+    width: 80%;
+}
+
+#box_404 p, #box_403 p{
+    color: var(--font);
+    font-family: Roboto,sans-serif;
+    font-size:2em;
+    text-align: center;
+}
+
+#box_404 p:last-of-type,
+#box_403 p:last-of-type{
+    padding-bottom:2em
+}
+
+#box_404 p:last-of-type a,
+#box_403 p:last-of-type a{
+    text-decoration: none;
+    color: var(--button);
+    font-family: Oswald, sans-serif;
+}
+
+footer{
+    font-family: Oswald, sans-serif;
+    font-size: 1.5em;
+    background-color: var(--menuFootC);
+    color:var(--font);
+    padding:0.5em;
+}
+
+footer p{
+    text-align: center;
+}
+
+footer p a{
+    text-decoration:underline;
+    color:var(--font);
+}
+
+
+
+
+
+/*responsive*/
+
+#check{
+    display: none;
+}
+
+#burger-menu{/*icona del burger menu di norma quando non si abbasano i pixel è display:none*/
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 100%;
+    cursor: pointer;
+}
+
+#burger-menu span{/*tre linee per icona burger menu*/
+    height:0.2em;
+    width: 100%;
+    background-color: var(--font);
+    margin: 0.2em 0;
+    border-radius:1em;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    #burger-menu {/*diventa visibile quando vado sotto i 1024px*/
+        display: flex;
+        position: relative;
+        margin: 0 auto 0 auto;
+        gap: 0.3em;
+        padding: 0.5em;
+        z-index: 1000; /* Assicura che sia sopra altri elementi */
+    }
+
+    #burger-menu span {
+        display: block;
+        width: 2.5em;
+        height: 0.25em;
+        background-color: #fff; /* puoi usare anche var(--coloreTesto) */
+        border-radius: 0.5em;
+    }
+
+    .main-menu nav{
+        padding-right: 0;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        align-items: center;
+        height:7em;
+    }
+
+    .main-menu img{
+        display: none;
+    }
+
+    .main-menu nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--menuFootC);
+        width: 100%;
+        padding: 1em 0;
+        margin: 0;
+    }
+
+    #check:checked ~ nav ul {
+        display: flex;
+    }
+
+    .main-menu nav ul li {
+        width: 100%;
+        text-align: center;
+        font-size:2em;
+    }
+    .main-menu nav ul {
+        gap: 1em;
+        font-size: 0.9em;
+    }
+
+    .pres h1{
+        margin-top:3em;
+        font-size:2.6em;
+    }
+
+    .pres p{
+        font-size: 1.2em;
+    }
+
+    #film_evidenza {
+        flex-direction: column;
+        height: auto;
+        padding: 1.5em;
+    }
+
+    #film_evidenza a {
+        width: 100%;
+        height: auto;
+    }
+
+    #filtro_box{
+        flex-direction: column;
+        font-size: 1.5em;
+        width:70%;
+    }
+
+    #catalogo_film{
+        gap:1em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #descrizione_film p, #descrizione_film_adm p{
+        font-size: 1.7em;
+        text-align: center;
+    }
+
+    #spazio_recensioni h2, #spazio_recensioni_adm h2{
+        font-size: 2.5em;
+    }
+
+    #form_recensioni textarea{
+        height: 6em;
+        font-size:2em;
+    }
+
+    #form_recensioni button{
+        height: 2em;
+        width: 30%;
+        font-family: Oswald, sans-serif;
+        font-size:2em;
+        border-radius:0.5em;
+    }
+    
+    #modifica_dettagli_admin{
+        gap:1em;
+    }
+
+    #modifica_dettagli_admin p {
+        font-size: 1.7em;
+        display:flex;
+        flex-direction: column;
+    }
+
+    #modifica_dettagli_admin p button {
+        display:block;
+        margin:auto;
+        width: 20%;
+        margin-top: 1em;
+    }
+
+    
+
+    .empty_recens_box{
+        font-size: 1.7em;
+    }
+
+
+    .no_empty_recens_box_utente{
+        font-size:1.5em;
+    }
+
+    .no_empty_recens_box_testo{
+        height: 3em;
+        font-size:1.5em;
+    }
+
+    #recensioni_box_adm button{
+        width:20%;
+        font-size: 1.5em;
+    }
+
+    #contatti_box h1{
+    
+        padding: 4em 0 0 0;
+    
+    }
+
+    #contatti_box p{
+        font-size: 1.8em;
+    }
+
+    #contatti_box p:first-of-type{
+        margin:2em;
+    }
+    
+    #contatti_box form label{
+        font-size:2em;
+    }
+
+    #contatti_box input{
+        width:50%;
+        font-size:1.5em;
+    }
+
+    #contatti_box textarea{
+        width:50%;
+        font-size:1.5em;
+    }
+
+    #contatti_box form button{
+        width: 20%;
+        font-size: 1.5em;
+    }
+
+    #contatti_box h2{
+        font-size:2em;
+    }
+
+    #login_box h1{
+        padding-top:5em;
+    }
+
+    #login_box form label{
+        font-size: 2em;
+    }
+
+    #login_box form input{
+        width:50%;
+        height: 3.5em;
+        font-size:1.5em;
+    }
+
+    #login_box form button{
+        width:20%;
+        font-size:1.5em;
+
+    }
+
+    #login_box p{
+        font-size:2em;
+    }
+
+    #registr_box h1{
+        padding-top: 4em;
+    }
+
+    #registr_box form label{
+        font-size:2em;
+    }
+
+    #registr_box form input{
+        height:2em;
+        width: 50%;
+        font-size: 1.5em;
+    }
+
+    #registr_box form button{
+        width:20%;
+        font-size:1.5em;
+
+    }
+
+    .profilo h1{
+        padding-top:2.5em;
+    }
+
+    .info_profilo{
+        width:50%;
+    }
+
+    .info_profilo p{
+        font-size:1.6em;
+    }
+
+    #logout_button_bas, #logout_button_adm{
+        width:20%;
+        font-size: 1.5em;
+    }
+
+    .recens_proprie{
+        font-size:1.5em;
+    }
+
+    .recens_proprie_text{
+        font-size:1.5em;
+    }
+
+    .elimina_recensione button{
+        font-size:0.9em;
+    }
+
+    #no_recens_proprie{
+        font-size: 2em;
+
+    }
+
+    #form_admin input{
+        width:50%; 
+        font-size:1.5em;
+    }
+
+    #form_admin select{
+        width:51%;
+        font-size: 1.5em;
+    }
+
+    #form_admin textarea{ 
+        width:50%;
+        font-size:1.5em;
+    }
+
+    #form_admin button{
+        width: 30%;
+        font-size:1.8em;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    #catalogo_film{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #contatti_box input{
+        height:2em;
+    }
+
+    #contatti_box textarea{
+        height:4em;
+    }
+
+    #login_box form input{
+        height: 2.5em;
+    }
+
+    #login_box form button{
+        width:30%
+    }
+
+    #registr_box form button{
+        width:30%;
+    }
+
+    #logout_button_bas,
+    #logout_button_adm{
+        width:30%;
+    }
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CineRate</title>
+        <link rel="stylesheet" href="/style/main.css">
+        <script src="script/admin.js"></script>
+        <script src="/script/gestione_ancora_profilo.js"></script>
+    </head>
+    <body>
+        <div class="main-menu">
+            <img src="/images/logo_edited.jpg" alt="logo">
+            <input type="checkbox" id="check">
+            <label for="check" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/catalogo.html">Catalogo</a></li>
+                    <li><a href="/contatti.html">Contatti</a></li>
+                    <li><a href="/login.html">Login</a></li>
+                    <li><a  id="menu-profilo" href="">Profilo</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="profilo">
+            <h1>Benvenuto, <span id="username_adm"></span></h1>
+            <h2>Le tue informazioni: </h2>
+            <div class="info_profilo">
+                <p id="nome_adm">Il tuo nome: <span></span></p>
+                <p id="cognome_adm">Il tuo cognome: <span></span></p>
+                <p id="tipo_utente_adm">Sei un utente: <span></span></p>
+                <p id="data_registrazione_adm">Registrato il: <span></span></p>
+            </div>
+            <button id="logout_button_adm">Logout</button>
+            <span class="divider"></span>
+            <form id="form_admin">
+                <h3>Inserisci un film</h3>
+                <input type="text" id="titolo_film" name="titolo_film" placeholder="Titolo del film">
+                <input type="number" id="anno_uscita" name="anno_uscita" min="1900" max="2025"  placeholder="Anno di uscita">
+                <input type="text" id="regista" name="regista" placeholder="Regista">
+                <input type="text" id="copertina_film" name="copertina_film" placeholder="URL della copertina del film">
+                <select id="evidenza" name="Evidenza">
+                    <option value="" disabled selected>Il film sarà in evidenza?</option>
+                    <option value="0">No</option>
+                    <option value="1">Sì</option>
+                </select>
+                <textarea id="descrizione_film" name="descrizione_film" placeholder="Descrizione del film"></textarea>
+                <input type="number" id="durata_film" name="durata_film"  placeholder="Durata del film">
+                <input type="text" id="genere_film" name="genere_film" placeholder="Genere del film">
+                <button type="submit">Aggiungi Film</button>
+            </form>
+            
+        </div>
+
+        <footer>
+            <p>&copy; 2025-CineRate | <a href="/contatti.html">CONTATTI</a></p>
+        </footer>
+    </body>
+</html>

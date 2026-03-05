@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CineRate - Contatti</title>
+        <link rel="stylesheet" href="style/main.css">
+        <script src="script/contatti.js"></script>
+        <script src="script/gestione_ancora_profilo.js"></script>
+    </head>
+    <body>
+        <div class="main-menu">
+            <img src="images/logo_edited.jpg" alt="logo">
+            <input type="checkbox" id="check">
+            <label for="check" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a  id="menu-profilo" href="">Profilo</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contatti_box">
+            <h1>Contatti</h1>
+            <p>Form per contattarci</p>
+            <form id="contatti_form">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <label for="oggetto">Oggetto</label>
+                <input type="text" id="oggetto" name="oggetto">
+                <label for="messaggio_form">Messaggio</label>
+                <textarea id="messaggio_form" name="messaggio"></textarea>
+
+                <button type="submit">Invia</button>
+            </form>
+            <h2>Oppure</h2>
+            <p>Tel: +39 100323456754</p>
+            <p>Email: <a href="mailto:contatti@cinerate.it">contatti@cinerate.it</a></p>
+        </div>
+        <footer>
+            <p>&copy; 2025-CineRate | <a href="contatti.html">CONTATTI</a></p>
+        </footer>
+    </body>
+</html>
